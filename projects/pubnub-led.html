@@ -20,6 +20,10 @@
     <!-- hover css -->
     <link rel="stylesheet" type="text/css" href="../bower_components/hover/css/hover.css">
     <!--############-->
+
+    <!-- animate -->
+    <link rel="stylesheet" type="text/css" href="../bower_components/animate.css/animate.css">
+    <!--#########-->
     
     <!--  google fonts  -->
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:Light300">
@@ -34,7 +38,11 @@
       <div class="row">
         <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12" align="center">
           <h1>PUBNUB-LED_BLINK</h1>
-          <button class="btn btn-default btn-lg hvr-grow">Disco on!</button>
+          <button class="btn btn-default btn-lg hvr-grow">lights on!</button>
+          <br>
+          <hr>
+          <h2 class="wow pulse" data-wow-iteration="infinite">TESTING</h2>
+          <hr>
         </div>
       </div>
     </div>
@@ -51,9 +59,9 @@
     <script> //click event handler
       var channel = 'led-lights'
       var p = PUBNUB.init({
-        subscribe_key: 'sub-c-f2b8c5c0-c34b-11e5-b684-02ee2ddab7fe ',
+        subscribe_key: 'sub-c-f2b8c5c0-c34b-11e5-b684-02ee2ddab7fe',
         publish_key: 'pub-c-1afde382-1404-4079-9139-8196509ba945'
-      });0
+      });
       
       //now we publish that the button has been pressed
       document.querySelector('button').assEventListener('click', function(){
@@ -63,5 +71,12 @@
         });
       }, false);
     </script>
+
+    <!-- wowjs -->
+    <script type="text/javascript" src="../bower_components/wow/dist/wow.min.js"></script>
+    <script type="text/javascript">
+      new WOW().init();
+    </script>
+    <!--#######-->
   </body>
 </html>
