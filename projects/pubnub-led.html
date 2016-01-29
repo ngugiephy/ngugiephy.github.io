@@ -57,45 +57,46 @@
     <script src="http://cdn.pubnub.com/pubnub-3.7.1.min.js"></script>
     
     <script> //click event handler
-      (function(){
+      //(function(){
         //DOM
-        var button = document.querySelector('button');
+        //var button = document.querySelector('button');
         
         //channel name being subscribed to
-        var channel = 'led-lights';
+        //var channel = 'led-lights';
         
         //init
-        var p = PUBNUB.init({
-          subscribe_key: 'sub-c-f2b8c5c0-c34b-11e5-b684-02ee2ddab7fe'
-          publish_key: 'pub-c-1afde382-1404-4079-9139-8196509ba945'
-        });
+        //var p = PUBNUB.init({
+          //subscribe_key: 'sub-c-f2b8c5c0-c34b-11e5-b684-02ee2ddab7fe'
+          //publish_key: 'pub-c-1afde382-1404-4079-9139-8196509ba945'
+        //});
         
         //sending data
-        function led-lights(){
-          p.publish({
-            channel : channel,
-            message : {led:1}
-          });
-        }
+        //function led-lights(){
+          //p.publish({
+            //channel : channel,
+            //message : {led:1}
+          //});
+        //}
         
         //click event
-        button.addEventListener('click', led-lights)
+        //button.addEventListener('click', led-lights)
         
-      })();
+      //})();
     
-      //var channel = 'led-lights'
-      //var p = PUBNUB.init({
-      //  subscribe_key: 'sub-c-f2b8c5c0-c34b-11e5-b684-02ee2ddab7fe',
-      //  publish_key: 'pub-c-1afde382-1404-4079-9139-8196509ba945'
-      //});
+      
+      var channel = 'led-lights'
+      var p = PUBNUB.init({
+        subscribe_key: 'sub-c-f2b8c5c0-c34b-11e5-b684-02ee2ddab7fe',
+        publish_key: 'pub-c-1afde382-1404-4079-9139-8196509ba945'
+      });
       
       //now we publish that the button has been pressed
-      //document.querySelector('button').assEventListener('click', function(){
-      //  p.publish({
-      //    channel: channel,
-      //    message: {led: 1} //we have the trigger here
-      //  });
-      //}, false);
+      document.querySelector('button').assEventListener('click', function(){
+        p.publish({
+          channel: channel,
+          message: {led: 1} //we have the trigger here
+        });
+      }, false);
     </script>
 
     <!-- wowjs -->
