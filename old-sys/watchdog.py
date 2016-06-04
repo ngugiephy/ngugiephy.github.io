@@ -2,7 +2,6 @@ import re
 import time
 from pubnub import Pubnub
 import os
-import subprocess
 
 pubnub = Pubnub(publish_key = 'pub-c-1afde382-1404-4079-9139-8196509ba945', subscribe_key="sub-c-f2b8c5c0-c34b-11e5-b684-02ee2ddab7fe")
 channel = "watchdog"
@@ -23,7 +22,6 @@ def kill_prog():
 	time.sleep(1)
 
 def run_prog():
-	# os.system('python updater.py')
 	os.system('python /home/pi/Desktop/full-system/updater.py')
 
 def callback(m):
@@ -31,14 +29,14 @@ def callback(m):
 
 
 while True:
-	time.sleep(10)
+	time.sleep(2)
 	kill_prog()
 	print "program killed"
-	pubnub.publish(channel, data_stopped, callback=callback, error=callback)
-	time.sleep(10)
+#	pubnub.publish(channel, data_stopped, callback=callback, error=callback)
+	time.sleep(3)
 	print "running program"
 	run_prog()
 	print "just exited from program..."
-	pubnub.publish(channel, data_running, callback=callback, error=callback)
+#	pubnub.publish(channel, data_running, callback=callback, error=callback)
 
 

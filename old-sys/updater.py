@@ -31,7 +31,6 @@ def check_update():
 	r = requests.get('http://dalcom.info/kplc/request.php?rq=1')
 	print r.text
 	return r.text
-#	print 'no network'
 
 def ftp_login():
 	global ftp
@@ -40,15 +39,12 @@ def ftp_login():
 
 def update_file():
 	global ftp
-	filename = 'system1.py'
+	filename = 'system1.update'
 	localfile = open(filename, 'wb')
 	ftp.retrbinary('retr ' + filename, localfile.write, 1024)
 	ftp.quit()
 	localfile.close()
-
-def ftp_logout():
-	global ftp
-	ftp.quit()
+	os.system('mv /home/pi/Desktop/full-sysytem/system1.update /home/pi/Desktop/full-system/system.py')
 
 def kill_prog():
 	val = os.popen('ps aux | grep system1.py').read()
@@ -80,45 +76,42 @@ def run_watchdog():
 #run_watchdog()
 
 count = 0; #counter for starting and stopping watchdog
-while True:
-	action = check_update()
-	print action
-	if (action == 'update'):
-		print 'the action right now is: %s' % action
-#		pubnub.publish(channel, data_update_found, callback=callback, error=callback)
-		kill_prog()
-		ftp_login()
-		update_file()
-		run_prog()
-		ftp_logout()
-#		pubnub.publish(channel, data_update_done, callback=callback, error=callback)
-	elif (action == 'stop'):
-		print 'the action right now is: %s' % action
-		#stop program
-		kill_prog()
-#		pubnub.publish(channel, data_stop, callback=callback, error=callback)
-	elif (action == 'start'):
-		print 'the action right now is: %s' % action
-		run_prog()		
-#		pubnub.publish(channel, data_start, callback=callback, error=callback)
-	elif (action == 'reboot'):
-		print 'the action right now is: %s' % action
-		restart_sys()
-#		pubnub.publish(channel, data_reboot, callback=callback, error=callback)
-	else:
-		print 'nothing to see here'
-
-	time.sleep(1)
-	count += 1
-	print 'the count is : %d' % count
-	if (count == 10):
-		break
-#	elif (count == 10):
-#		break
-#		val = os.popen('ps -ef | grep watchdog.py').read()
-#		res = val.split()
-#		kill_val = 'kill ' + res[1]
-#		os.system(kill_val)
-#	elif (count == 30):
-#		os.system('python watchdog.py')
+try:
+	while True:
+		action = check_update()
+		print action
+		if (action == 'update'):
+			print 'the action right now is: %s' % action
+#			pubnub.publish(channel, data_update_found, callback=callback, error=callback)
+			kill_prog()
+			ftp_login()
+			update_file()
+			run_prog()
+#			pubnub.publish(channel, data_update_done, callback=callback, error=callback)
+			time.sleep(10)
+		elif (action == 'stop'):
+			print 'the action right now is: %s' % action
+			#stop program
+			kill_prog()
+#			pubnub.publish(channel, data_stop, callback=callback, error=callback)
+			time.sleep(5)
+		elif (action == 'start'):
+			print 'the action right now is: %s' % action
+			run_prog()
+			time.sleep(5)		
+	#		pubnub.publish(channel, data_start, callback=callback, error=callback)
+		elif (action == 'reboot'):
+			print 'the action right now is: %s' % action
+			time.sleep(5)
+#			restart_sys()
+#			pubnub.publish(channel, data_reboot, callback=callback, error=callback)
+		else:
+			print 'nothing to see here'
 	
+		time.sleep(1)
+		count += 1
+		print 'the count is : %d' % count
+		if (count == 60):
+			break
+except:
+	print 'finally exiting'
