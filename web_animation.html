@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mwangazi</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- gsap -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+	<!-- bootstrap  -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<!-- custom js -->
+	<script type="text/javascript" >
+		$(document).ready(function(){
+			$('#line').click(function(){
+				// $(this).hide ();
+				// alert("hey");
+				// return false;
+
+				// //obj.rotation starts at 45
+				// var obj = {rotation:45}; 
+				 
+				// //tweens to the 270 position in a clockwise direction
+				// TweenLite.to(obj, 1, {directionalRotation:"270_cw"}); 
+				 
+				// //tweens to the 270 position in a counter-clockwise direction
+				// TweenLite.to(obj, 1, {directionalRotation:"270_ccw"});
+				 
+				// //tweens to the 270 position in the shortest direction (which, in this case, is counter-clockwise)
+				// TweenLite.to(obj, 1, {directionalRotation:"270_short"});
+				var button = $("#line");
+
+				TweenLite.to(button, 1, {rotation:"270_ccw"});
+
+
+
+			});
+
+			$('#line').dblclick(function(){
+				var button = $("#line");
+
+				TweenLite.to(button, 1, {rotation:"0_cw"});
+				// return false;
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12">
+				
+
+
+				<?xml version="1.0" encoding="utf-8"?>
+				<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+				<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 width="500px" height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+				<polyline fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" points="395.5,142 395.5,60.5 68.5,60.5 68.5,398.5 396.5,398.5 
+					396.5,250 "/>
+				<line id="line" fill="#FFFFFF" stroke="#000000" stroke-width="6" stroke-miterlimit="10" x1="396" y1="250" x2="396" y2="142"/>
+				<circle fill="#FFFFFF" stroke="#000000" stroke-width="5" stroke-miterlimit="10" cx="396.5" cy="141.833" r="2.833"/>
+				<circle fill="#FFFFFF" stroke="#000000" stroke-width="5" stroke-miterlimit="10" cx="396.5" cy="249.833" r="2.833"/>
+				</svg>
+
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
