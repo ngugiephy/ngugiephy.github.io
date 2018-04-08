@@ -26,26 +26,31 @@
 	<!-- custom js -->
 	<script type="text/javascript" >
 		$(document).ready(function(){
+			var buttonState = 1;
 			$('#switch_x5F_button').click(function(){
-				
-				var button = $("#switch");
+				if (buttonState == 1) {
+					buttonState = 0;
+					var button = $("#switch");
 
-				TweenLite.to(button, 1, {rotation:"340_ccw"});
-				$("#bulb_x5F_on").hide ();
-				$("#currentFlow").hide ();
+					TweenLite.to(button, 1, {rotation:"0_cw"});
+					$("#bulb_x5F_on").show ();
+					$("#currentFlow").show ();
+				} else {
+					buttonState = 1;
+					var button = $("#switch");
+
+					TweenLite.to(button, 1, {rotation:"340_ccw"});
+					$("#bulb_x5F_on").hide ();
+					$("#currentFlow").hide ();
+				}
+				
+				
 
 
 
 			});
 
-			$('#switch_x5F_button').dblclick(function(){
-				var button = $("#switch");
-
-				TweenLite.to(button, 1, {rotation:"0_cw"});
-				$("#bulb_x5F_on").show ();
-				$("#currentFlow").show ();
-				
-			});
+			
 		});
 	</script>
 </head>
