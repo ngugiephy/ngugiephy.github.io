@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+			<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+			<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				 width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+				<g id="_x34_">
+					<animateTransform attributeName="transform"
+						attributeType="XML"
+						type="rotate"
+						from="0 100 100"
+						to="360 100 100"
+						dur="10s"
+						repeatCount="indefinite" 
+					/>
+					
+					
+					<circle fill="#FFFFFF" cx="100" cy="100" r="64.235"/>
+					
+						<circle fill="none" stroke="#000000" stroke-width="9" stroke-miterlimit="10" stroke-dasharray="11.8695,11.8695" cx="100" cy="100" r="64.235"/>
+				</g>
+				<g id="_x33_">
+					<animateTransform attributeName="transform"
+						attributeType="XML"
+						type="rotate"
+						from="0 100 100"
+						to="-360 100 100"
+						dur="10s"
+						repeatCount="indefinite" 
+					/>
+					
+					
+					
+						<circle fill="none" stroke="#000000" stroke-width="9" stroke-miterlimit="10" stroke-dasharray="12.1491,12.1491" cx="100" cy="100" r="88.941"/>
+				</g>
+				<g id="_x32_">
+					<animateTransform attributeName="transform"
+						attributeType="XML"
+						type="rotate"
+						from="0 100 100"
+						to="360 100 100"
+						dur="10s"
+						repeatCount="indefinite" 
+					/>
+					
+					
+					<circle fill="#FFFFFF" cx="100" cy="100" r="40"/>
+					
+						<circle fill="none" stroke="#000000" stroke-width="9" stroke-miterlimit="10" stroke-dasharray="12.5631,12.5631" cx="100" cy="100" r="40"/>
+				</g>
+				<g id="_x31_">
+					<animateTransform attributeName="transform"
+						attributeType="XML"
+						type="rotate"
+						from="0 100 100"
+						to="-360 100 100"
+						dur="10s"
+						repeatCount="indefinite" 
+					/>
+					
+					
+					<circle fill="#FFFFFF" cx="100" cy="100" r="21.177"/>
+					
+						<circle fill="none" stroke="#000000" stroke-width="9" stroke-miterlimit="10" stroke-dasharray="11.0852,11.0852" cx="100" cy="100" r="21.177"/>
+				</g>
+			</svg>
