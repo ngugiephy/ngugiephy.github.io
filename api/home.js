@@ -4,5 +4,5 @@ $(window).on('load', function() {
 });
 
 $( document ).ready(function() {
-   
+   // alert("we on");
 });
