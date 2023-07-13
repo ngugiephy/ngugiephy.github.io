@@ -1,6 +1,6 @@
 $(window).on('load', function() {
 	// Animate loader off screen
-	$("#splash_screen").fadeOut("slow");;
+	$("#splash_screen").addClass("animated slideOutLeft");;
 });
 
 $( document ).ready(function() {
