@@ -1,6 +1,6 @@
 var frameNumber = 0,
 
-playbackConst = 1000,
+playbackConst = 502,
 
 setHeight = document.getElementById("set-height")
 
