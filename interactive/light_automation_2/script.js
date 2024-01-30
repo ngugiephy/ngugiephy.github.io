@@ -1,8 +1,18 @@
 $(window).on('load', function() {
   // Animate loader off screen
-  $("#splash_screen").fadeOut("slow");;
+  // $("#splash_screen").delay(5000).fadeOut("slow");;
+  // alert("adsf");
+  $('#op').html('<div class="animate__animated animate__bounce" style="color:#2AC155;box-shadow: 0px 0px 8px #888888;padding:10px;">Content Loaded</div>');
+
 });
 
+$( document ).ready(function() {
+    $('#enter').click(function(){
+      $("#splash_screen").addClass("animate__animated animate__backOutDown");;
+      
+      return false;
+    });
+});
 
 
 
