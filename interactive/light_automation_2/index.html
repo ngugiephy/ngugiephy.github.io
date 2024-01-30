@@ -19,7 +19,22 @@
 
 </head>
 <body>
-	
+	<style type="text/css">
+		.progress {
+		   height: 15px;
+		   width: 0;
+		   /*background: #FFF600;*/
+		   background: rgba(255, 246, 0, 0.5);
+		   position: fixed;
+		   top: 0;  
+		   left: 0;
+		   right: 0;
+		   margin-top: 10px;
+		   z-index: 9999;
+		}
+	</style>
+	<div class="progress"></div>
+
 	<div id="splash_screen" class="">
 		
 
@@ -27,28 +42,31 @@
 			<div class="row" style="box-shadow: 0px 0px 8px #888888;margin:10px;">
 				<div class="col-lg-12 d-flex justify-content-center">
 					
-						<img src="../../api/img/africa_gears.svg" height="100px">
+						<img src="img___/thumb.jpg" height="100px" style="box-shadow: 0px 0px 8px #888888;">
 					
 				</div>
-				<div class="col-lg-12">
+				<div class="col-lg-12 ">
 					<p style="padding-left: 10px;padding-right: 10px;">
-						<b>Light Automation (Interactive)</b>
+						<b class="">Light Automation (Interactive)</b>
 					</p>
 				</div>
-				<div class="col-lg-12">
+				<div class="col-lg-12 ">
 					<p style="padding-left: 10px;padding-right: 10px;">
 						Welcome to the interactive walkthrough on implementing a <b>Lights automation</b> project through <b>IoT</b>
 					</p>
 				</div>
 				<div class="col-lg-12">
-					<p style="padding-left: 10px;padding-right: 10px;">
-						Scroll down <i class="fa fa-arrow-down animate__animated animate__bounce animate__infinite	infinite"></i> to move forward <i class="fa fa-arrow-right animate__animated animate__bounceInLeft animate__slower animate__infinite	infinite"></i>
-					</p>
+					
 				</div>
 				<div class="col-lg-12">
+					<div class="alert alert-primary" role="alert">
+						<p style="padding-left: 10px;padding-right: 10px;">
+						Scroll down <i class="fa fa-arrow-down animate__animated animate__bounce animate__infinite	infinite"></i> to move forward <i class="fa fa-arrow-right animate__animated animate__bounceInLeft animate__slower animate__infinite	infinite"></i>
+					</p>
 					<p style="padding-left: 10px;padding-right: 10px;">
 						Scroll up <i class="fa fa-arrow-up animate__animated animate__shakeY animate__slower animate__infinite	infinite"></i> to move back <i class="fa fa-arrow-left animate__animated animate__bounceInRight animate__slower animate__infinite	infinite"></i>
 					</p>
+					</div>
 				</div>
 				<div class="col-lg-12  d-flex justify-content-center">
 					<i class="fa fa-mobile-phone fa-3x"></i>
@@ -71,9 +89,7 @@
 				</div>
 			</div>
 			
-		</div>
-
-		
+		</div>	
 	</div>
 	
 
