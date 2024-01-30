@@ -2,7 +2,7 @@ $(window).on('load', function() {
   // Animate loader off screen
   // $("#splash_screen").delay(5000).fadeOut("slow");;
   // alert("adsf");
-  $('#op').html('<div class="animate__animated animate__bounce" style="color:#2AC155;box-shadow: 0px 0px 8px #888888;padding:10px;">Content Loaded</div>');
+  $('#op').delay(10000).html('<div class="animate__animated animate__bounce" style="color:#00FF49;background-color: #616161;box-shadow: 0px 0px 8px #888888;padding:5px;margin-bottom:10px;margin-top:100px;">Content Loaded</div><button type="button" class="btn btn-outline-success btn-lg" id="enter" style="box-shadow: 0px 0px 8px #888888;">Enter Scene</button>');
 
 });
 
