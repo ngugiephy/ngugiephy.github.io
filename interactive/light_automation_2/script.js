@@ -64,6 +64,21 @@ window.addEventListener('scroll', () => {
   );
   
   requestAnimationFrame(() => updateImage(frameIndex + 1))
+
+
+
+
+
+
+
+
+
+
+  let totalHeight = document.body.scrollHeight -      window.innerHeight;
+   let windowOffsetHeight = window.pageYOffset;
+   let progress = document.querySelector('.progress');
+   let percentage = (windowOffsetHeight * 100 / totalHeight)
+    progress.style.width = percentage + "%";
 });
 
 preloadImages()
@@ -77,10 +92,6 @@ preloadImages()
 
 
 // scroll indicator
-window.addEventListener('scroll', function() {
-   let totalHeight = document.body.scrollHeight -      window.innerHeight;
-   let windowOffsetHeight = window.pageYOffset;
-   let progress = document.querySelector('.progress');
-   let percentage = (windowOffsetHeight * 100 / totalHeight)
-    progress.style.width = percentage + "%";
-});
+// window.addEventListener('scroll', function() {
+   
+// });
