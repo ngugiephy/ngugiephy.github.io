@@ -29,4 +29,5 @@ canvas {
   height: 100%;
   width: auto;
   /*max-height: 100vh;*/
+  box-shadow: 0px 0px 8px #888888;
 }

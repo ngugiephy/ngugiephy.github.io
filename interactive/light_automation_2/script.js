@@ -6,19 +6,8 @@ $(window).on('load', function() {
 
 });
 
-$( document ).ready(function() {
-    // $('#enter').click(function(){
-    //   $("#splash_screen").fadeOut("slow");
-      
-    //   return false;
-    // });
-});
 
-// $('#enter').click(function(){
-//       $("#splash_screen").fadeOut("slow");
-      
-//       return false;
-//     });
+// called by the "Enter Scene" button, with a onclick attribute
 function fadeoutSplash(){
   $("#splash_screen").fadeOut("slow");
 }
