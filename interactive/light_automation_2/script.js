@@ -8,7 +8,7 @@ $(window).on('load', function() {
 
 $( document ).ready(function() {
     $('#enter').click(function(){
-      $("#splash_screen").addClass("animate__animated animate__backOutDown");;
+      $("#splash_screen").fadeOut("slow");
       
       return false;
     });
